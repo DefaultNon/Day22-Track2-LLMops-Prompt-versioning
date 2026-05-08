@@ -1,0 +1,46 @@
+# Environment variables
+.env
+.env.test
+.env.dev
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.libs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDEs
+.vscode/
+.idea/
+
+# Data and evidence (Optional: usually you want to exclude large datasets but keep reports)
+# In this lab, we might want to keep evidence/ for local use but exclude it from git if required.
+# However, usually we keep the evidence in the repo for submission.
+# So I will NOT ignore evidence/ by default unless requested.
+
+# RAG specific
+faiss_index/
+*.faiss
+*.pkl

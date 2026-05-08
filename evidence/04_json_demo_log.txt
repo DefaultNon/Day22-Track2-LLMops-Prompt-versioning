@@ -1,0 +1,29 @@
+=======================================================
+  JSON Formatting Demo
+=======================================================
+
+[Valid JSON] [PASS]
+  Input:  {"name": "Alice", "age": 30}
+  Output: {"name": "Alice", "age": 30}
+  [DEBUG] JSON repaired successfully.
+
+[Markdown fences] [PASS]
+  Input:  ```json
+{"name": "Bob"}
+```
+  Output: ```json {"name": "Bob"} ```
+  [DEBUG] JSON repaired successfully.
+
+[Single quotes] [PASS]
+  Input:  {'name': 'Charlie', 'score': 95}
+  Output: {'name': 'Charlie', 'score': 95}
+  [DEBUG] JSON repaired successfully.
+
+[Trailing comma] [PASS]
+  Input:  {"key": "value",}
+  Output: {"key": "value",}
+  [DEBUG] JSON repair failed: Expecting value: line 1 column 1 (char 0)
+
+[Truly invalid] [PASS]
+  Input:  This is not JSON at all: ??? {]
+  Output: {"error": "unrecoverable", "raw": "This is not JSON at all:
